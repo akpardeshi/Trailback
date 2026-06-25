@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662de8a6992c486fa87e377ee9253765, type: 3}
+  m_Name: Navigation History
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: Navigation History
+  shortDescription: Automatically track navigation state and return to previous UI
+    elements.
+  fullDescription: 'Trailback automatically maintains navigation history as users
+    move through your UI.
+
+
+    Instead of creating and managing your own back stack,
+    Trailback keeps track of navigation state for screens, popups, overlays, and
+    other navigable elements. This allows applications to return to previously visited
+    UI without additional history management code.
+
+
+    Features include:
+
+
+    *
+    Automatic History Tracking
+
+    * Back Navigation Support
+
+    * Category-Aware
+    Navigation
+
+    * Navigation State Management
+
+
+    Whether you''re building
+    a simple menu flow or a more complex layered UI, Trailback helps keep navigation
+    history organized and back navigation behavior consistent.'
+  screenshots: []
+  videoUrl: 
+  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#quick-start--build-your-first-trailback-integration
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 50

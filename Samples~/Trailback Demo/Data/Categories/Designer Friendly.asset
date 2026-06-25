@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503b1ae0c7014cfcbac51e503e52e14d, type: 3}
+  m_Name: Designer Friendly
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureCategoryData
+  categoryName: Designer Friendly
+  description: Features designed for Inspector-driven workflows, allowing designers
+    to configure behavior and respond to navigation events without writing code.
+  features:
+  - {fileID: 11400000, guid: 0b9084c84322f264180662876f5b51cd, type: 2}

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662de8a6992c486fa87e377ee9253765, type: 3}
+  m_Name: Input Abstraction
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: Input Abstraction
+  shortDescription: Support multiple input systems through a unified back navigation
+    workflow.
+  fullDescription: "Trailback doesn't depend on a specific Unity input solution.\n\nBack
+    navigation requests are provided through BackInputSource implementations, allowing
+    different input systems to trigger the same navigation behavior.\n\nSupported
+    integrations include:\n\n\u2022 Legacy Input Manager\n\u2022 Unity Input System\n\nThis
+    means you can migrate from the Legacy Input Manager to the Unity Input System,
+    or support different input workflows across projects, without changing how navigation
+    is configured.\n\nTrailback remains focused on handling navigation, while input
+    detection can be implemented using whichever input solution makes sense for your
+    project."
+  screenshots: []
+  videoUrl: https://youtu.be/3ibhd9dK9J8
+  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#step-9--connect-back-input
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 50

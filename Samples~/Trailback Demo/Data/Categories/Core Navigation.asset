@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503b1ae0c7014cfcbac51e503e52e14d, type: 3}
+  m_Name: Core Navigation
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureCategoryData
+  categoryName: Core Navigation
+  description: Core navigation features provide the foundation of Trailback's back
+    navigation workflow, including history management, category-based resolution,
+    navigation blocking, and root detection.
+  features:
+  - {fileID: 11400000, guid: 0c0e3ac106da21f488ee18a26abb3a73, type: 2}
+  - {fileID: 11400000, guid: 289d54426a4119a469a19c081beae6e0, type: 2}
+  - {fileID: 11400000, guid: 920898a487325ef4fa96ff54882fc497, type: 2}
+  - {fileID: 11400000, guid: 761aa4280927e0e4aa2027a6cccf9869, type: 2}

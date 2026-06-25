@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503b1ae0c7014cfcbac51e503e52e14d, type: 3}
+  m_Name: Integration
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureCategoryData
+  categoryName: Integration
+  description: Features that make it easier to connect Trailback to existing systems,
+    input solutions, and UI architectures.
+  features:
+  - {fileID: 11400000, guid: 7625e803ee4c447499d80cf9d08c936d, type: 2}
+  - {fileID: 11400000, guid: d91ff767f0845c44fb323013b3fd1b49, type: 2}
+  - {fileID: 11400000, guid: 4ac676a882120a643916c71f07202fbf, type: 2}

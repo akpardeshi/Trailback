@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662de8a6992c486fa87e377ee9253765, type: 3}
+  m_Name: Navigation Blockers
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: Navigation Blockers
+  shortDescription: Prevent back navigation when a workflow requires user attention
+    or confirmation.
+  fullDescription: 'Navigation Blockers allow applications to temporarily disable
+    back navigation when leaving the current UI state could cause problems or interrupt
+    an important workflow.
+
+
+    Common use cases include:
+
+
+    * Confirmation Dialogs
+
+    *
+    Unsaved Changes
+
+    * Critical Workflows
+
+    * Modal Interactions
+
+
+    When
+    a blocker is active, Trailback prevents navigation from continuing until the
+    blocker is removed. This helps ensure that important user actions, confirmations,
+    and in-progress workflows are not accidentally dismissed through back navigation.
+
+
+    Navigation
+    Blockers are integrated directly into Trailback''s navigation system, providing
+    a consistent way to control when navigation should be available across different
+    areas of an application.'
+  screenshots: []
+  videoUrl: 
+  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#adding-navigation-blockers
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 50

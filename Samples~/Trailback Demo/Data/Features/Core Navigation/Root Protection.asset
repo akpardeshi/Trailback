@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662de8a6992c486fa87e377ee9253765, type: 3}
+  m_Name: Root Protection
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: Root Protection
+  shortDescription: Protect navigation categories from consuming their final history
+    entry.
+  fullDescription: 'Root Protection prevents Trailback from navigating beyond the
+    final entry in a protected navigation category.
+
+
+    When users return to the
+    last available entry in a category and press Back again, Trailback doesn''t remove
+    that entry or continue resolving history. Instead, it raises the `OnNavigationRootReached`
+    event, allowing the application to decide what should happen next.
+
+
+    Common
+    use cases include:
+
+
+    * Exit Confirmation Dialogs
+
+    * Return To Main Menu
+
+    *
+    Application Exit Handling
+
+    * Custom Navigation Workflows
+
+
+    Benefits include:
+
+
+    *
+    Protected Navigation Roots
+
+    * Predictable Navigation Boundaries
+
+    * Safe
+    History Resolution
+
+    * Category-Level Root Protection
+
+    * Configurable
+    Root-Reached Events
+
+
+
+    This makes it easy to define behavior for situations
+    where users have reached the end of a navigation flow, while keeping navigation
+    boundaries clear and predictable.
+
+
+    The `OnNavigationRootReached` event can
+    be handled through Inspector events, bridge events, or direct event subscriptions,
+    depending on how Trailback is integrated into your project.'
+  screenshots: []
+  videoUrl: https://youtu.be/s7KsSg2JdM0
+  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#navigation-root-reached
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 50

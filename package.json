@@ -1,0 +1,28 @@
+﻿{
+  "name": "com.modularforge.trailback",
+  "version": "1.0.0-alpha",
+  "displayName": "Trailback",
+  "description": "A navigation framework for Unity that manages back navigation across screens, popups, and dialogs using category-based history, navigation priorities, navigation blockers, and runtime diagnostics.",
+  "unity": "2022.3",
+  "unityRelease": "0f1",
+  "author": {
+    "name": "Modular Forge"
+  },
+  "keywords": [
+    "navigation",
+    "back-button",
+    "ui",
+    "popup",
+    "history",
+    "framework",
+    "tooling"
+  ],
+  "dependencies": {},
+  "samples": [
+    {
+      "displayName": "Trailback Demo",
+      "description": "The package includes a demo scene demonstrating basic navigation, category priorities, navigation blockers, runtime monitoring, and input integration.",
+      "path": "Samples~/Trailback Demo"
+    }
+  ]
+}

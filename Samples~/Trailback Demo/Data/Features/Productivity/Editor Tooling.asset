@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662de8a6992c486fa87e377ee9253765, type: 3}
+  m_Name: Editor Tooling
+  m_EditorClassIdentifier: ModularForge.Trailback.Demo::ModularForge.Trailback.Demo.Features.FeatureDemoData
+  featureName: Editor Tooling
+  shortDescription: Create and configure common Trailback components directly from
+    Unity editor menus.
+  fullDescription: "Trailback includes built-in editor tooling designed to streamline
+    setup and reduce manual scene configuration.\n\nCreate common Trailback components
+    directly from Unity's context menus:\n\n\u2022 Complete Setup\n\u2022 Legacy
+    Back Input Source\n\u2022 Input System Back Input Source\n\u2022 Trailback Event
+    Listener\n\u2022 Runtime Monitor\n\nEditor tooling helps developers quickly bootstrap
+    a Trailback integration and provides a consistent starting point for new scenes.\n\nThe
+    generated components are fully editable and can be customized to fit existing
+    project architecture and workflows.\n\nDesigned to reduce repetitive setup tasks
+    while keeping the framework flexible and framework-agnostic."
+  screenshots: []
+  videoUrl: https://youtu.be/YwVd0EzwZdE
+  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#installation
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 7

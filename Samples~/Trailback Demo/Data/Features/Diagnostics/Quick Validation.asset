@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662de8a6992c486fa87e377ee9253765, type: 3}
+  m_Name: Quick Validation
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: Quick Validation
+  shortDescription: Detect common setup issues before runtime.
+  fullDescription: "Trailback Quick Validation performs a fast health check of common
+    framework components and configuration mistakes.\r\n\r\nChecks include:\r\n\r\n\u2022
+    Missing Components\r\n\u2022 Duplicate Components\r\n\u2022 Disabled Components\r\n\r\nValidation
+    results are displayed directly in the Unity Console and include object references
+    to help locate problems quickly.\r\n\r\nDesigned to catch common setup mistakes
+    before they become runtime issues and reduce integration time during development."
+  screenshots: []
+  videoUrl: https://youtu.be/zVk-k0QPdIg
+  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#quick-setup-validation
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 8

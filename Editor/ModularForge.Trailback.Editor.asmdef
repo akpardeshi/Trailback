@@ -1,0 +1,18 @@
+{
+    "name": "ModularForge.Trailback.Editor",
+    "rootNamespace": "ModularForge.Trailback",
+    "references": [
+        "GUID:c3afd88bf4de309489542c673433a0b1"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

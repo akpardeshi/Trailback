@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503b1ae0c7014cfcbac51e503e52e14d, type: 3}
+  m_Name: Diagnostics
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureCategoryData
+  categoryName: Diagnostics
+  description: Tools and systems that help inspect, debug, and validate navigation
+    state during runtime.
+  features:
+  - {fileID: 11400000, guid: 50581b4fedc74aa448b8ff2d7124410f, type: 2}
+  - {fileID: 11400000, guid: 783dcf088e8f4c44e9d1cd72cce0a360, type: 2}

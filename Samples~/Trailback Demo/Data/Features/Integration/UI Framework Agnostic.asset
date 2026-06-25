@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 662de8a6992c486fa87e377ee9253765, type: 3}
+  m_Name: UI Framework Agnostic
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: UI Framework Agnostic
+  shortDescription: Designed to work with a wide range of Unity UI architectures
+    and workflows.
+  fullDescription: "Trailback is designed to manage navigation without being tied
+    to a specific UI implementation.\n\nIt doesn't require your UI to inherit from
+    a particular base class, follow a predefined screen architecture, or use a specific
+    presentation framework. Instead, Trailback focuses on navigation behavior, making
+    it easier to integrate into existing projects without restructuring your UI systems.\n\nTrailback
+    has been developed and tested primarily with Unity UGUI and Canvas-based workflows,
+    but it can be used with many UI architectures that require:\n\n\u2022 Back Navigation\n\u2022
+    Navigation History\n\u2022 Category-Based Resolution\n\u2022 Navigation Blockers\n\nTrailback
+    is not a state machine, command system, or undo/redo framework. Its responsibility
+    is intentionally focused on navigation management, allowing it to work alongside
+    other systems that handle application state, game flow, or business logic.\n\nProjects
+    with highly customized UI pipelines or specialized workflow requirements may
+    require additional integration, but Trailback is designed to remain flexible
+    and adapt to a variety of project structures."
+  screenshots: []
+  videoUrl: 
+  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#what-is-trailback
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 50

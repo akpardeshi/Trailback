@@ -1,0 +1,17 @@
+{
+    "name": "ModularForge.Trailback.Demo",
+    "rootNamespace": "ModularForge.Trailback",
+    "references": [
+        "GUID:c3afd88bf4de309489542c673433a0b1",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
