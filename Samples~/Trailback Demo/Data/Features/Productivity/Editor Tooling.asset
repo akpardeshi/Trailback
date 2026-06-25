@@ -26,7 +26,7 @@ MonoBehaviour:
     while keeping the framework flexible and framework-agnostic."
   screenshots: []
   videoUrl: https://youtu.be/YwVd0EzwZdE
-  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#installation
+  documentationUrl: https://github.com/akpardeshi/Trailback/#installation
   featureStatus: 0
   featureVersion:
     Major: 1

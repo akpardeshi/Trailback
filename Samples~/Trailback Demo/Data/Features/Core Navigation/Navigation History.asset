@@ -44,7 +44,7 @@ MonoBehaviour:
     history organized and back navigation behavior consistent.'
   screenshots: []
   videoUrl: 
-  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#quick-start--build-your-first-trailback-integration
+  documentationUrl: https://github.com/akpardeshi/Trailback/#quick-start--build-your-first-trailback-integration
   featureStatus: 0
   featureVersion:
     Major: 1

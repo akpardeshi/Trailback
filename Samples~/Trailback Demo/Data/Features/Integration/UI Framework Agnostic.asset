@@ -31,7 +31,7 @@ MonoBehaviour:
     and adapt to a variety of project structures."
   screenshots: []
   videoUrl: 
-  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#what-is-trailback
+  documentationUrl: https://github.com/akpardeshi/Trailback/#what-is-trailback
   featureStatus: 0
   featureVersion:
     Major: 1

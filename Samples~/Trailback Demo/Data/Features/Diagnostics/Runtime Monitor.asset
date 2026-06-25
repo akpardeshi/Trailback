@@ -25,7 +25,7 @@ MonoBehaviour:
     popups, overlays, and navigation blockers."
   screenshots: []
   videoUrl: https://youtu.be/EURabjPkRlU
-  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#runtime-monitor
+  documentationUrl: https://github.com/akpardeshi/Trailback/#runtime-monitor
   featureStatus: 0
   featureVersion:
     Major: 1

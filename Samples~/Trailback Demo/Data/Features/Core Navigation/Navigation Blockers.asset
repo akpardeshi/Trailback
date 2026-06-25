@@ -45,7 +45,7 @@ MonoBehaviour:
     areas of an application.'
   screenshots: []
   videoUrl: 
-  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#adding-navigation-blockers
+  documentationUrl: https://github.com/akpardeshi/Trailback/#adding-navigation-blockers
   featureStatus: 0
   featureVersion:
     Major: 1

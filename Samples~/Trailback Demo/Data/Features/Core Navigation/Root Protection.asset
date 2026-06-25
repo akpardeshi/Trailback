@@ -67,7 +67,7 @@ MonoBehaviour:
     depending on how Trailback is integrated into your project.'
   screenshots: []
   videoUrl: https://youtu.be/s7KsSg2JdM0
-  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#navigation-root-reached
+  documentationUrl: https://github.com/akpardeshi/Trailback/#navigation-root-reached
   featureStatus: 0
   featureVersion:
     Major: 1

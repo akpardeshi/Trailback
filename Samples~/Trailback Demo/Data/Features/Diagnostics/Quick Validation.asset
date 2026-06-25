@@ -22,7 +22,7 @@ MonoBehaviour:
     before they become runtime issues and reduce integration time during development."
   screenshots: []
   videoUrl: https://youtu.be/zVk-k0QPdIg
-  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#quick-setup-validation
+  documentationUrl: https://github.com/akpardeshi/Trailback/#quick-setup-validation
   featureStatus: 0
   featureVersion:
     Major: 1

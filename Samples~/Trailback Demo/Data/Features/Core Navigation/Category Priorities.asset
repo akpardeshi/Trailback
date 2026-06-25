@@ -44,7 +44,7 @@ MonoBehaviour:
     UI layers can be active at the same time.'
   screenshots: []
   videoUrl: 
-  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#adding-popups-and-priorities
+  documentationUrl: https://github.com/akpardeshi/Trailback/#adding-popups-and-priorities
   featureStatus: 0
   featureVersion:
     Major: 1

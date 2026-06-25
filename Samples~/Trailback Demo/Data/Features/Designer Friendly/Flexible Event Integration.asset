@@ -26,7 +26,7 @@ MonoBehaviour:
     pattern."
   screenshots: []
   videoUrl: https://youtu.be/AgmuAj9C4iQ
-  documentationUrl: https://github.com/akpardeshi/Trailback-Unity/#event-subscription-reference
+  documentationUrl: https://github.com/akpardeshi/Trailback/#event-subscription-reference
   featureStatus: 0
   featureVersion:
     Major: 1
