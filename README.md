@@ -17,7 +17,7 @@
 >
 > Feedback, bug reports, and integration experiences are greatly appreciated:
 >
-> https://github.com/akpardeshi/Trailback-Unity/issues
+> https://github.com/akpardeshi/Trailback/issues
 >
 > Thanks for helping make Trailback better.
 >
@@ -153,7 +153,7 @@ Click:
 Enter:
 
 ```text
-https://github.com/akpardeshi/Trailback-Unity.git
+https://github.com/akpardeshi/Trailback.git
 ```
 
 https://github.com/user-attachments/assets/86313e72-b50a-4d10-91c5-d15b6e74d294
