@@ -640,19 +640,33 @@ public sealed class DemoTrailbackBridge : TrailbackIntegrationBridge
 This ties everything together: it owns the bridge, registers the handler, and reports visibility changes as screens open and close.
 
 ```csharp
+using ModularForge.Trailback.Core;
+using ModularForge.Trailback.Input;
 using UnityEngine;
 
 public sealed class DemoNavigationController : MonoBehaviour
 {
-    private DemoTrailbackBridge _bridge;
+    private readonly DemoTrailbackBridge _bridge = new();
+
+    [SerializeField] private BackInputSource backInputSource;
 
     [SerializeField] private HomeScreen homeScreen;
     [SerializeField] private SettingsScreen settingsScreen;
 
     private void Awake()
     {
-        _bridge = new DemoTrailbackBridge();
+        // Register the application's navigation handler once during startup.
         Trailback.SetNavigationHandler(new DemoBackNavigationHandler());
+    }
+
+    private void OnEnable()
+    {
+        backInputSource.BackRequested += HandleBackRequested;
+    }
+
+    private void OnDisable()
+    {
+        backInputSource.BackRequested -= HandleBackRequested;
     }
 
     private void Start()
@@ -670,7 +684,7 @@ public sealed class DemoNavigationController : MonoBehaviour
         _bridge.Show(settingsScreen);
     }
 
-    public void HandleBackRequested()
+    private void HandleBackRequested()
     {
         _bridge.Back();
     }
