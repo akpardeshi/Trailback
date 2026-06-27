@@ -678,7 +678,6 @@ public sealed class DemoNavigationController : MonoBehaviour
     public void OpenSettings()
     {
         homeScreen.Hide();
-        _bridge.Hide(homeScreen);
 
         settingsScreen.Show();
         _bridge.Show(settingsScreen);
@@ -690,6 +689,9 @@ public sealed class DemoNavigationController : MonoBehaviour
     }
 }
 ```
+
+> **Note:** This example focuses only on the Trailback integration to keep the code easy to follow. The full demo also includes application-specific code for screen management, popup management, lookup tables, and initialization, but those parts have been left out to keep the example focused.
+
 
 ### Step 9 — Connect Back Input
 
