@@ -627,7 +627,7 @@ public sealed class DemoTrailbackBridge : TrailbackIntegrationBridge
 
     public override void Show(IBackNavigable element) => Trailback.ReportShown(element);
 
-    public override void Hide(IBackNavigable element) => Trailback.Remove(element);
+    public override void Hide(IBackNavigable element) => Trailback.ReportHidden(element);
 
     public override bool Back() => Trailback.Back();
 
