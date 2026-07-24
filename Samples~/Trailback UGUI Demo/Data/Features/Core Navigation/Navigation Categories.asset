@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98791389b7d380b4395ab6a364f1847c, type: 3}
+  m_Name: Navigation Categories
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: Navigation Categories
+  shortDescription: Maintain independent navigation flows with configurable priorities.
+  fullDescription: "Navigation Categories organize related UI elements into independent
+    navigation groups.\n\nEach category maintains its own navigation history and
+    configuration, allowing screens, popups, overlays, and other UI layers to behave
+    independently while still participating in the same Back navigation flow.\n\nCategories
+    also define how Trailback resolves navigation by controlling priority, duplicate
+    handling, and root protection.\n\nFeatures include:\n\n\u2022 Independent Navigation
+    Histories\n\u2022 Priority-Based Resolution\n\u2022 Configurable Duplicate Policies\n\u2022
+    Root Element Protection\n\nBy separating navigation into categories, Trailback
+    can resolve Back navigation predictably, even when multiple UI layers are active
+    at the same time."
+  screenshots: []
+  videoUrl: 
+  documentationUrl: https://github.com/akpardeshi/Trailback/blob/main/Documentation/Guides/Features.md#navigation-categories
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 0

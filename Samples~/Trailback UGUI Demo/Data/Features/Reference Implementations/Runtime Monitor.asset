@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98791389b7d380b4395ab6a364f1847c, type: 3}
+  m_Name: Runtime Monitor
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: Runtime Monitor
+  shortDescription: Inspect navigation history and framework state during runtime.
+  fullDescription: "The Runtime Monitor lets you inspect Trailback's navigation state
+    while your application is running.\n\nIt displays navigation history, active
+    categories, blockers, and other runtime information, making it easier to understand
+    how Trailback is responding to Back navigation and to diagnose issues during
+    development.\n\nFeatures include:\n\n\u2022 Live Navigation History\n\u2022 Runtime
+    State Inspection\n\u2022 Category Visualization\n\u2022 Debugging Support\n\nThe
+    Runtime Monitor is included as a reference sample. Use it as-is during development,
+    or customize it to fit your own debugging workflow."
+  screenshots: []
+  videoUrl: https://youtu.be/R4zTTQH_ZtA
+  documentationUrl: https://github.com/akpardeshi/Trailback/blob/main/Documentation/Guides/ReferenceSamplesGuide.md#runtime-monitor
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 0

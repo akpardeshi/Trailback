@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98791389b7d380b4395ab6a364f1847c, type: 3}
+  m_Name: Complete UGUI Demo
+  m_EditorClassIdentifier: ModularForge.Trailback.Demo::ModularForge.Trailback.Demo.Features.FeatureDemoData
+  featureName: 'Complete UGUI Demo '
+  shortDescription: Explore a complete working reference implementation.
+  fullDescription: "The Complete UGUI Demo is a fully working Unity project that
+    shows how Trailback fits into a real application.\n\nIt brings the framework's
+    core features together in a single scene, making it easy to explore the navigation
+    flow, understand how the different components interact, and see how a complete
+    integration is structured.\n\nFeatures include:\n\n\u2022 Complete Working Integration\n\u2022
+    Core Navigation Features\n\u2022 Reference Samples\n\u2022 Production-Style Architecture\n\nThe
+    demo is a great starting point for learning Trailback. Explore it, experiment
+    with it, and use it as a reference while integrating the framework into your
+    own project."
+  screenshots: []
+  videoUrl: https://youtu.be/adPRJ59t6w8
+  documentationUrl: https://github.com/akpardeshi/Trailback/blob/main/Documentation/Guides/ReferenceSamplesGuide.md#complete-ugui-demo
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 0

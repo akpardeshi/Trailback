@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98791389b7d380b4395ab6a364f1847c, type: 3}
+  m_Name: Navigation History
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: Navigation History
+  shortDescription: Automatically track navigation state and restore previous UI
+    elements.
+  fullDescription: "Navigation History is at the core of how Trailback handles back
+    navigation.\n\nWhenever a screen or popup becomes visible, Trailback records
+    it in the navigation history. When the user presses Back, Trailback resolves
+    the previous navigation target and returns control to your application to perform
+    the transition.\n\nThis removes the need to maintain your own back stack and
+    helps keep navigation behavior consistent as your UI grows.\n\nFeatures\n\n\u2022
+    Automatic History Tracking\n\u2022 Previous Screen & Popup Restoration\n\u2022
+    Configurable Duplicate Policies\n\u2022 Category-Based Navigation History\n\nBy
+    keeping navigation history up to date, Trailback can reliably determine where
+    Back should go next, even in applications with multiple UI layers."
+  screenshots: []
+  videoUrl: 
+  documentationUrl: https://github.com/akpardeshi/Trailback/blob/main/Documentation/Guides/Features.md#navigation-history
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 0

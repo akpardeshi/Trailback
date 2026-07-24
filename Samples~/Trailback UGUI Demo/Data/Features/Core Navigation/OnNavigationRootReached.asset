@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98791389b7d380b4395ab6a364f1847c, type: 3}
+  m_Name: OnNavigationRootReached
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: OnNavigationRootReached
+  shortDescription: Detect when Back navigation reaches the protected root.
+  fullDescription: "When the user presses Back at the protected root of a navigation
+    category, Trailback raises the Navigation Root Reached event instead of attempting
+    another navigation operation.\n\nYour application can respond to this event in
+    whatever way makes sense for your navigation flow, whether that's showing an
+    exit confirmation dialog, returning to the main menu, or closing the application.\n\nYou
+    can subscribe to the event through the Inspector, an integration bridge, or directly
+    through the Trailback API.\n\nFeatures include:\n\n\u2022 Inspector Event Support\n\u2022
+    Integration Bridge Support\n\u2022 Direct API Subscription\n\u2022 Custom Root
+    Behaviors\n\nThe Navigation Root Reached event gives your application full control
+    over what happens when there's nowhere left to navigate."
+  screenshots: []
+  videoUrl: https://youtu.be/6nSCugszPOA
+  documentationUrl: https://github.com/akpardeshi/Trailback/blob/main/Documentation/Guides/Features.md#onnavigationrootreached
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 0

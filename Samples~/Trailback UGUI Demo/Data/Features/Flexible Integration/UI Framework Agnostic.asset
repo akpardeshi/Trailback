@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98791389b7d380b4395ab6a364f1847c, type: 3}
+  m_Name: UI Framework Agnostic
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: UI Framework Agnostic
+  shortDescription: Integrate with your existing UI architecture.
+  fullDescription: "Trailback is designed to work alongside your existing UI architecture,
+    not replace it.\n\nIt focuses solely on back navigation, allowing you to continue
+    using your preferred UI framework, screen management system, and application
+    architecture. Trailback simply resolves where Back should go next and leaves
+    the UI implementation to your project.\n\nFeatures include:\n\n\u2022 Framework
+    Independence\n\u2022 Flexible Integration\n\u2022 Existing UI Compatibility\n\u2022
+    Minimal Project Assumptions\n\nBecause Trailback makes very few assumptions about
+    how your UI is built, it can be integrated into both new and existing Unity projects
+    without requiring major architectural changes."
+  screenshots: []
+  videoUrl: 
+  documentationUrl: https://github.com/akpardeshi/Trailback/blob/main/Documentation/Guides/Features.md#ui-framework-agnostic
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 0

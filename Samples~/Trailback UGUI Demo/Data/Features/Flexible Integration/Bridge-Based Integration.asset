@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98791389b7d380b4395ab6a364f1847c, type: 3}
+  m_Name: Bridge-Based Integration
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: Bridge-Based Integration
+  shortDescription: Keep application code independent from Trailback.
+  fullDescription: "The Integration Bridge provides a clear boundary between your
+    application and Trailback.\n\nRather than calling Trailback directly throughout
+    your project, your application communicates with the bridge, which forwards navigation
+    requests to the framework. Keeping that integration in one place makes your code
+    easier to organize, maintain, and adapt as your project evolves.\n\nFeatures
+    include:\n\n\u2022 Single Integration Point\n\u2022 Reduced Framework Coupling\n\u2022
+    Cleaner Application Architecture\n\u2022 Easier Maintenance\n\nFor most projects,
+    the Integration Bridge is the recommended way to integrate Trailback because
+    it keeps framework-specific code isolated from the rest of your application."
+  screenshots: []
+  videoUrl: 
+  documentationUrl: https://github.com/akpardeshi/Trailback/blob/main/Documentation/Guides/Features.md#bridge-based-integration
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 0

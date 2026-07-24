@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98791389b7d380b4395ab6a364f1847c, type: 3}
+  m_Name: Scene Reload Support
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: Scene Reload Support
+  shortDescription: Safely start new navigation flows after scene reloads.
+  fullDescription: "Trailback gives your application full control over when a navigation
+    history begins and ends.\n\nWhen you start a new navigation flow\u2014such as
+    loading a different scene or rebuilding your UI\u2014you can reset the current
+    navigation history and register a new root screen. This ensures Back navigation
+    starts from a clean, predictable state.\n\nFeatures include:\n\n\u2022 Navigation
+    History Reset\n\u2022 Scene Reload Support\n\u2022 New Navigation Flow Registration\n\u2022
+    Consistent Navigation State\n\nTrailback doesn't manage scenes for you. Instead,
+    it provides the tools to keep navigation history in sync with your application's
+    lifecycle, whether you're using single-scene, multi-scene, or additive scene
+    workflows."
+  screenshots: []
+  videoUrl: https://youtu.be/cd5eNp8FL0Q
+  documentationUrl: https://github.com/akpardeshi/Trailback/blob/main/Documentation/Guides/Features.md#scene-reload-support
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 0
