@@ -6,7 +6,8 @@ namespace ModularForge.Trailback.Core
     /// Resolves navigation information from Trailback history.
     /// </summary>
     /// <remarks>
-    /// BackResolver acts as the bridge between history storage and navigation execution.
+    /// BackResolver acts as the bridge between history storage, navigation resolution,
+    /// and navigation execution.
     ///
     /// This class is responsible for:
     /// - Resolving navigation contexts
@@ -28,7 +29,10 @@ namespace ModularForge.Trailback.Core
         /// BackResolver uses this history instance to:
         ///
         /// - Resolve the current navigation entry
-        /// - Resolve the previous navigation entry
+        /// - Resolve the current navigation entry
+        /// - Resolve the back navigation target
+        /// - Evaluate category priorities
+        /// - Generate navigation contexts
         /// - Evaluate category priorities
         /// - Generate navigation contexts
         ///
@@ -62,7 +66,8 @@ namespace ModularForge.Trailback.Core
         /// Resolves the current navigation context.
         /// </summary>
         /// <returns>
-        /// A navigation context containing the current and previous navigation entries.
+        /// A navigation context containing the current navigation entry and the
+        /// resolved back navigation target.
         ///
         /// Returns an empty context if no active navigation category can be resolved.
         /// </returns>
@@ -81,7 +86,7 @@ namespace ModularForge.Trailback.Core
                 return new BackContext(null, null);
             }
 
-            return new BackContext(_history.PeekCurrent(), _history.PeekPrevious());
+            return new BackContext(_history.PeekCurrent(), _history.ResolveBackTarget());
         }
 
         /// <summary>
@@ -101,14 +106,18 @@ namespace ModularForge.Trailback.Core
         #region Diagnostics
         
         /// <summary>
-        /// Builds a diagnostic snapshot representing Trailback's current runtime state.
+        /// Builds an immutable snapshot representing Trailback's current runtime state.
         /// </summary>
         /// <returns>
         /// An immutable snapshot containing navigation, history, and blocking information.
         /// </returns>
         /// <remarks>
-        /// This method is primarily intended for diagnostics, monitoring, debugging,
-        /// and developer tooling.
+        /// This method aggregates navigation state, navigation history, runtime
+        /// statistics, and navigation blocking information into a single diagnostic
+        /// snapshot.
+        ///
+        /// It is intended for diagnostics, runtime monitoring, debugging, and
+        /// developer tooling.
         /// </remarks>
         public TrailbackState BuildState()
         {
@@ -134,21 +143,21 @@ namespace ModularForge.Trailback.Core
                 canGoBack = false;
             }
             
-            
-            return new TrailbackState
-            (
-                TrailbackDebugUtility.GetDebugName(context.Current) ?? "None",
-                TrailbackDebugUtility.GetDebugName(context.Previous) ?? "None",
-
+            var navigationSnapshot = new TrailbackNavigationSnapshot(
+                _history.GetCurrentHistoryEntry(),
+                _history.GetBackTargetHistoryEntry(),
                 canGoBack,
-
-                _history.ActiveCategoryCount,
-                 _history.TotalHistoryEntries,
-                _history.HighestPriorityCategoryName,
-
                 blockReason,
-                blockDetails
-            );
+                blockDetails);
+            
+            var historySnapshot = _history.BuildHistorySnapshot();
+
+            return new TrailbackState(
+                navigationSnapshot,
+                historySnapshot,
+                _history.ActiveCategoryCount,
+                _history.TotalHistoryEntries,
+                _history.HighestPriorityCategoryName);
         }
         
         #endregion

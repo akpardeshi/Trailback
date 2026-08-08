@@ -1,7 +1,7 @@
 ﻿# Table of Contents
 
 1. [Introduction](#introduction)
-2. [Complete UGUI Demo](#complete-ugui-demo)
+2. [Trailback UGUI Demo](#trailback-ugui-demo)
 3. [Legacy Input](#legacy-input)
 4. [Unity Input System](#unity-input-system)
 5. [Runtime Monitor](#runtime-monitor)
@@ -21,19 +21,19 @@ The samples are optional, but they're a great way to see Trailback in action wit
 
 ---
 
-# Complete UGUI Demo
+# Trailback UGUI Demo
 
-The **Complete UGUI Demo** is the best place to get familiar with Trailback.
+The **Trailback UGUI Demo** is the best place to get familiar with Trailback.
 
 It brings the framework's core features together in a single scene, giving you a chance to see how navigation behaves in a complete UI instead of isolated examples. Most of the reference samples in this guide build on the same project, so spending a few minutes with the demo makes the rest of the documentation much easier to follow.
 
-You'll also find the reference implementations for **Legacy Input**, the **Unity Input System**, and the **Runtime Monitor** inside the **Complete UGUI Demo** sample. The Complete UGUI Demo serves as the primary reference implementation for Trailback and is referenced throughout the documentation.
+You'll also find the reference implementations for **Legacy Input**, the **Unity Input System**, and the **Runtime Monitor** inside the **Trailback UGUI Demo** sample. The **Trailback UGUI Demo** serves as the primary reference implementation for Trailback and is referenced throughout the documentation.
 
 Each implementation can be explored directly in the demo scene and through the accompanying scripts included with the imported sample.
 
 > [!TIP]
 >
-> If you're new to Trailback, start with the Complete UGUI Demo before exploring the individual reference samples. Seeing the full navigation flow first makes it easier to understand how each sample fits into the overall framework.
+> If you're new to Trailback, start with the **Trailback UGUI Demo** before exploring the individual reference samples. Seeing the full navigation flow first makes it easier to understand how each sample fits into the overall framework.
 
 ---
 
@@ -66,7 +66,7 @@ The demo includes working examples of:
 If this is your first time using Trailback, the following order works well.
 
 ```text
-Complete UGUI Demo
+Trailback UGUI Demo
         │
         ├── Explore the navigation flow
         │
@@ -99,7 +99,7 @@ By the end of this walkthrough, you'll have seen the framework's core navigation
 
 The Legacy Input sample shows how to integrate Trailback using Unity's built-in **Legacy Input Manager**.
 
-It's the default input setup used by the **Complete UGUI Demo**, so you can explore Trailback without changing the demo or configuring another input system.
+It's the default input setup used by the **Trailback UGUI Demo**, so you can explore Trailback without changing the demo or configuring another input system.
 
 If your project already uses the Legacy Input Manager, this sample demonstrates the complete integration workflow.
 
@@ -174,7 +174,7 @@ Once everything is connected, pressing the configured key raises a `BackRequeste
 
 Your Navigation Controller receives the event and forwards it to Trailback, where the normal navigation pipeline takes over.
 
-The **Complete UGUI Demo** includes a complete working implementation of this integration if you'd like to see it in action.
+The **Trailback UGUI Demo** includes a complete working implementation of this integration if you'd like to see it in action.
 
 > [!NOTE]
 >
@@ -182,7 +182,7 @@ The **Complete UGUI Demo** includes a complete working implementation of this in
 
 The default Back key is Escape, but you can assign any KeyCode that fits your project's input scheme.
  
-The **Complete UGUI Demo** listens for `BackRequested` events from `DemoNavigationController`, but that's just one possible approach. You're free to connect the input source to whatever navigation controller or architecture your project already uses.
+The **Trailback UGUI Demo** listens for `BackRequested` events from `DemoNavigationController`, but that's just one possible approach. You're free to connect the input source to whatever navigation controller or architecture your project already uses.
 
 ---
 
@@ -320,7 +320,7 @@ Once everything is connected, performing the assigned Input Action raises a `Bac
 
 Your Navigation Controller receives the event and forwards it to Trailback, where the normal navigation pipeline takes over.
 
-The **Complete UGUI Demo** includes a complete working implementation of this integration and an editor utility for switching between the Legacy Input Manager and the Unity Input System.
+The **Trailback UGUI Demo** includes a complete working implementation of this integration and an editor utility for switching between the Legacy Input Manager and the Unity Input System.
 
 **Creating the Input Action**
 
@@ -346,7 +346,7 @@ From that point onward, Trailback processes the request exactly the same way as 
 
 > [!TIP]
 >
-> The **Complete UGUI Demo** includes a small editor utility that lets you switch between the Legacy Input and Unity Input System implementations without manually changing the scene.
+> The **Trailback UGUI Demo** includes a small editor utility that lets you switch between the Legacy Input and Unity Input System implementations without manually changing the scene.
 
 ---
 
@@ -356,14 +356,14 @@ From that point onward, Trailback processes the request exactly the same way as 
 
 The Runtime Monitor lets you inspect Trailback's navigation state while your application is running.
 
-It's included with the **Complete UGUI Demo** and is useful when you're debugging navigation issues or simply want to see how Trailback responds as users move through your UI.
+It's included with the **Trailback UGUI Demo** and is useful when you're debugging navigation issues or simply want to see how Trailback responds as users move through your UI.
 
 The Runtime Monitor is provided as a reference implementation, so you're free to use it as-is or adapt it to fit your own debugging workflow.
 
 **Requirements**
 
 Before using the Runtime Monitor, make sure:
-* The **Complete UGUI Demo** sample has been imported.
+* The **Trailback UGUI Demo** sample has been imported.
 * The **Trailback Runtime Monitor** prefab has been added to the scene.
 * The scene contains a **Canvas**.
 * The scene contains an **Event System**.
@@ -374,11 +374,11 @@ Before using the Runtime Monitor, make sure:
 
 **Setup**
 
-The Runtime Monitor is included with the **Complete UGUI Demo**.
+The Runtime Monitor is included with the **Trailback UGUI Demo**.
 
 To use it in your own project:
 
-1. Import the **Complete UGUI Demo** sample.
+1. Import the **Trailback UGUI Demo** sample.
 2. Locate the **Trailback Runtime Monitor** prefab.
 3. Drag the prefab into your scene.
 4. Press **Play** to begin monitoring Trailback's navigation state.
@@ -414,7 +414,7 @@ The Runtime Monitor is intended as a learning and debugging tool rather than a p
 
 > [!WARNING]
 >
-> The Runtime Monitor is distributed with the **Complete UGUI Demo**. If you remove the sample from your project, the Runtime Monitor prefab and its supporting scripts will be removed as well. Existing Runtime Monitor instances may become missing or lose their script references.
+> The Runtime Monitor is distributed with the **Trailback UGUI Demo**. If you remove the sample from your project, the Runtime Monitor prefab and its supporting scripts will be removed as well. Existing Runtime Monitor instances may become missing or lose their script references.
 >
 > If you plan to customize or keep using the Runtime Monitor, it's a good idea to create your own copy inside your project's **Assets** folder before removing the sample.
 

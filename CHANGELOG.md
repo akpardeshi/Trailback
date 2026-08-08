@@ -2,6 +2,24 @@
 
 All notable changes to Trailback will be documented in this file.
 
+## [1.1.0-alpha] - 2026-08-06
+
+### Added 
+
+#### Debugging
+* Trailback Runtime Debugger
+
+#### Documentation
+* `TrailbackDeveloperGuide.md`
+
+
+### Improved
+
+#### Documentation
+* `README.md` Quick Start guide
+
+--- 
+
 ## [1.0.0-alpha] - 2026-07-25
 
 ### Added

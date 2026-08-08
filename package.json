@@ -1,6 +1,6 @@
 ﻿{
   "name": "com.modularforge.trailback",
-  "version": "1.0.0-alpha",
+  "version": "1.1.0-alpha",
   "displayName": "Trailback",
   "description": "A navigation framework for Unity that manages back navigation across screens, popups, and dialogs using category-based history, navigation priorities, navigation blockers, and runtime diagnostics.",
   "unity": "2022.3",

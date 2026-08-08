@@ -8,9 +8,9 @@
 5. [Trailback Starts With Stale History](#trailback-starts-with-stale-history)
 6. [Back Doesn't Return To The Previous Screen](#back-doesnt-return-to-the-previous-screen)
 7. [Locked Popup Never Closes](#locked-popup-never-closes)
-8. [Navigation Root Reached Never Fires](#navigation-root-reached-never-fires)
+8. [OnNavigationRootReached Never Fires](#onnavigationrootreached-never-fires)
 9. [Root Screen Disappears When Pressing Back](#root-screen-disappears-when-pressing-back)
-10. [Navigation Root Reached Fires Too Early](#navigation-root-reached-fires-too-early)
+10. [OnNavigationRootReached Fires Too Early](#onnavigationrootreached-fires-too-early)
 11. [Scene Reload Causes Missing References](#scene-reload-causes-missing-references)
 12. [Still Having Problems?](#still-having-problems)
 13. [Report an Issue](#report-an-issue)
@@ -99,7 +99,14 @@ Make sure:
 
 If a single Back press closes multiple screens or skips entries in the navigation history, the Back event is usually being handled more than once.
 
-A common cause is subscribing in both code and the Inspector.
+A common cause is subscribing to the same BackRequested event in both code and the Inspector.
+
+For example:
+
+* Subscribe to `BackRequested` in `OnEnable()`.
+* Also assign `HandleBackRequested()` to the **Back Requested** UnityEvent in the Inspector.
+
+That causes a single Back press to invoke `HandleBackRequested()` twice.
 
 ```text
 BackRequested
@@ -107,14 +114,23 @@ BackRequested
  ┌────┴────┐
  ↓         ↓
 Code   Inspector
+ ↓         ↓
+HandleBackRequested()
+HandleBackRequested()
 ```
+
+This can lead to:
+
+* Two back navigation requests from a single button press.
+* Multiple screens or popups closing at once.
+* Navigation history becoming inconsistent.
 
 Pick one approach:
 
 * Code subscription (recommended for production)
-* Inspector event wiring
+* Inspector subscription
 
-Using both at the same time will cause duplicate navigation requests.
+Using both at the same time causes duplicate back navigation requests.
 
 ---
 
@@ -315,7 +331,7 @@ Close the popup through your own application logic before allowing navigation to
 
 ---
 
-## Navigation Root Reached Never Fires
+## OnNavigationRootReached Never Fires
 
 
 This event is only raised when Back navigation reaches the protected root of the active navigation category.
@@ -353,7 +369,7 @@ Check the following:
 
 ## Root Screen Disappears When Pressing Back
 
-If pressing Back hides the Home Screen instead of raising **Navigation Root Reached**, Root Protection is most likely disabled.
+If pressing Back hides the Home Screen instead of raising **OnNavigationRootReached**, Root Protection is most likely disabled.
 
 Check the navigation category assigned to your root screen.
 
@@ -367,7 +383,7 @@ Without Root Protection, Trailback treats the last history entry like any other 
 
 ---
 
-## Navigation Root Reached Fires Too Early
+## OnNavigationRootReached Fires Too Early
 
 This usually happens when more than one navigation category has **Protect Root** enabled.
 
@@ -390,7 +406,7 @@ Only one navigation category should have Root Protection enabled.
 
 Otherwise you may see:
 
-* `Navigation Root Reached` raised earlier than expected
+* `OnNavigationRootReached` event raised earlier than expected
 * A different category blocking navigation
 * Navigation stopping before returning to the expected screen
 

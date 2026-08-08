@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98791389b7d380b4395ab6a364f1847c, type: 3}
+  m_Name: Trailback Debugger
+  m_EditorClassIdentifier: Assembly-CSharp::Trailback.Demo.Features.Data.FeatureDemoData
+  featureName: Trailback Debugger
+  shortDescription: Inspect and debug Trailback's navigation history in real time
+    while your application is running.
+  fullDescription: 'The Trailback Debugger displays the current state of Trailback''s
+    navigation history while the application is running.
+
+
+    The Trailback Debugger
+    groups the navigation history by Navigation Category. It displays the current
+    navigation element, the next navigation element, navigation statistics, and the
+    complete navigation history. Each navigation entry includes a Ping button that
+    allows the developer to select the corresponding GameObject in the Hierarchy
+    window.
+
+
+    The Trailback Debugger is intended to help developers inspect the
+    current navigation history and diagnose navigation-related issues during development.'
+  screenshots: []
+  videoUrl: https://youtu.be/pYRAUtAr-mM
+  documentationUrl: https://github.com/akpardeshi/Trailback/blob/main/Documentation/Guides/Features.md#trailback-debugger
+  featureStatus: 0
+  featureVersion:
+    Major: 1
+    Minor: 0
+    Patch: 0
+  featureImportance: 0

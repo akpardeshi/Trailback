@@ -57,7 +57,7 @@ namespace ModularForge.Trailback.Core
         /// Uses the navigation history to determine:
         ///
         /// - Current navigation entry
-        /// - Previous navigation entry
+        /// - Back navigation target
         /// - Category priority resolution
         /// - Navigation context generation
         ///
@@ -69,7 +69,7 @@ namespace ModularForge.Trailback.Core
         /// Executes navigation transitions resolved by Trailback.
         /// </summary>
         /// <remarks>
-        /// Trailback determines what navigation should occur. occur.
+        /// Trailback determines what navigation should occur.
         ///
         /// The navigation handler determines how that navigation is performed.
         ///
@@ -115,7 +115,7 @@ namespace ModularForge.Trailback.Core
                 }
             }
 
-            if (context.Previous == null && context.Current == null)
+            if (context.BackTarget == null && context.Current == null)
             {
                 Debug.LogWarning("[Trailback] Failed to resolve back navigation context.");
 
@@ -190,6 +190,7 @@ namespace ModularForge.Trailback.Core
         public static void ResetHistory()
         {
             _history.ClearAll();
+            NotifyStateChanged();
         }
 
         #endregion

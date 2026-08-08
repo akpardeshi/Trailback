@@ -8,8 +8,9 @@
     * [Navigation Blocking](#navigation-Blocking)
     * [Root Protection](#root-protection)
     * [OnNavigationRootReached](#onnavigationrootreached)
-    * [Scene Reload Support](#scene-reload-support)
+    * [Resetting Navigation History](#resetting-navigation-history)
     * [UI Framework Agnostic](#ui-framework-agnostic)
+    * [Trailback Debugger](#trailback-debugger)
 4. [Framework Integration](#framework-integration)
     * [Input Abstraction](#input-abstraction)
     * [Bridge-Based Integration](#bridge-based-integration)
@@ -42,7 +43,7 @@ Instead of handling screen history, layered UI, and back button behavior separat
 
 ---
 
-## Core Philosophy
+# Core Philosophy
 
 Trailback keeps the core framework focused on one responsibility: back navigation.
 
@@ -355,7 +356,7 @@ Instead of calling `TrailbackFacade` throughout your project, the rest of the ap
 
 ---
 
-## Scene Reload Support
+## Resetting Navigation History
 
 **Overview**
 
@@ -431,6 +432,45 @@ Trailback keeps track of navigation history and resolves Back navigation. Your a
 
 ---
 
+## Trailback Debugger
+
+The purpose of the Trailback Debugger is to help developers inspect and debug Trailback's current navigation history. Open the Trailback Debugger from 
+
+```text
+    Tools 
+        → Trailback 
+            → Trailback Debugger
+```
+
+<img width="880" height="70" alt="Open Trailback Debugger" src="https://github.com/user-attachments/assets/9585892e-9d56-4409-8a5b-5471d8f96765" />
+
+The entries in the Trailback Debugger are grouped by Navigation Category, making it easier to inspect large navigation histories.
+
+The Trailback Debugger contains three sections:
+* Navigation
+* Statistics
+* History
+
+**Navigation:**
+
+The **Navigation** section displays the **Current** element, which is the navigation element currently visible to the user, and the **Next** element, which will become visible after a successful back navigation. Both elements include a **Ping** button that selects the corresponding GameObject in the Hierarchy window.
+
+**CanGoBack** indicates whether back navigation is currently possible. It displays Yes when back navigation is possible; otherwise, it displays No.
+
+The other two regions in this section are **BlockReason** and **BlockDetails**, they explain why the navigation is blocked.
+
+**Statistics:**
+
+The statistics region has 3 active elements in it ActiveCategories, HistoryEntries, and HighestPriority.
+* **ActiveCategories:** Number of active Navigation Categories.
+* **HistoryEntries:** Total number of elements across all Navigation Categories.  
+* **HighestPriority:** The currently active Navigation Category with the highest priority.
+
+**History:**
+
+The History section is the most important part of Trailback Debugger. You will spend most of your time here debugging the Navigation History. The history view will give you a list of all the active elements in the current navigation history. Just like the Navigation section, each history entry also includes a Ping button for selecting the corresponding GameObject in the Hierarchy window.
+
+
 # Next Steps
 
 Continue with the guide that best matches what you're working on.
@@ -441,3 +481,4 @@ Continue with the guide that best matches what you're working on.
 | [**Reference Samples Guide**](ReferenceSamplesGuide.md) | Explore the included reference implementations and learn from complete integration examples.                  |
 | [**Handling Scene Changes**](HandlingSceneChanges.md)  | Learn how to manage navigation history across scene changes and multi-scene workflows.              |
 | [**Troubleshooting**](Troubleshooting.md)              | Resolve common setup, configuration, and integration issues.                                        |
+| [**Trailback Developer Guide**](TrailbackDeveloperGuide.md)     | Learn how to integrate Trailback features into your project with practical examples, implementation guides, and best practices. |

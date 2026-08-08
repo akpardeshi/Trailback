@@ -19,7 +19,7 @@ namespace ModularForge.Trailback.Core
     ///
     /// BackHistory does not perform navigation resolution or navigation execution.
     /// </remarks>
-    public sealed class BackHistory
+    public class BackHistory
     {
 
         #region Fields
@@ -42,7 +42,7 @@ namespace ModularForge.Trailback.Core
         #endregion
         
         
-        #region History  Registration
+        #region History Registration
 
         /// <summary>
         /// Registers a navigation entry in history.
@@ -134,24 +134,6 @@ namespace ModularForge.Trailback.Core
         }
 
         /// <summary>
-        /// Returns the navigation entry that would become active after a successful back navigation.
-        /// </summary>
-        /// <returns>
-        /// The previous navigation entry from the highest priority category, or null if no entry exists.
-        /// </returns>
-        public IBackNavigable PeekPrevious()
-        {
-            var category = GetHighestPriorityCategory();
-
-            if (category == null)
-            {
-                return null;
-            }
-
-            return PeekPrevious(category);
-        }
-
-        /// <summary>
         /// Removes and returns the current navigation entry from the highest priority category.
         /// </summary>
         /// <returns>
@@ -209,6 +191,53 @@ namespace ModularForge.Trailback.Core
             }
 
             return false;
+        }
+        
+        /// <summary>
+        /// Returns the navigation entry that would become active after a successful
+        /// back navigation.
+        /// </summary>
+        /// <returns>
+        /// The resolved back navigation target, or <see langword="null"/> if no valid
+        /// target exists.
+        /// </returns>
+        /// <remarks>
+        /// If the active category contains more than one navigation entry, the previous
+        /// entry in that category is returned.
+        ///
+        /// Otherwise, Trailback searches the remaining categories in priority order and
+        /// returns the most recent entry from the highest-priority category that still
+        /// contains navigation history.
+        /// </remarks>
+        internal IBackNavigable ResolveBackTarget()
+        {
+            var activeCategory = GetHighestPriorityCategory();
+
+            if (activeCategory == null)
+            {
+                return null;
+            }
+
+            if (!_historyByCategory.TryGetValue(activeCategory, out var stack))
+            {
+                return null;
+            }
+
+            // Back stays within the current category.
+            if (stack.Count > 1)
+            {
+                return PeekPrevious(activeCategory);
+            }
+
+            // Back leaves the current category.
+            var nextCategory = GetHighestPriorityCategoryExcluding(activeCategory);
+
+            if (nextCategory == null)
+            {
+                return null;
+            }
+
+            return Peek(nextCategory);
         }
         
         #endregion
@@ -281,6 +310,53 @@ namespace ModularForge.Trailback.Core
         
         #endregion
 
+        
+        #region Diagnostics
+        
+        /// <summary>
+        /// Builds an immutable snapshot of the current navigation history.
+        /// </summary>
+        /// <returns>
+        /// A history snapshot representing the current state of Trailback's
+        /// navigation history.
+        /// </returns>
+        /// <remarks>
+        /// This method is intended for diagnostics, runtime monitoring,
+        /// debugging, and developer tooling.
+        /// </remarks>
+        internal TrailbackHistorySnapshot BuildHistorySnapshot()
+        {
+            var entries = CreateHistoryEntries();
+
+            return new TrailbackHistorySnapshot(entries);
+        }
+        
+        /// <summary>
+        /// Returns the current navigation entry as a diagnostic history entry.
+        /// </summary>
+        /// <returns>
+        /// The current navigation entry represented as a
+        /// <see cref="TrailbackHistoryEntry"/>.
+        /// </returns>
+        public TrailbackHistoryEntry GetCurrentHistoryEntry()
+        {
+            return CreateHistoryEntry(PeekCurrent());
+        }
+        
+        /// <summary>
+        /// Returns the resolved back navigation target as a diagnostic history entry.
+        /// </summary>
+        /// <returns>
+        /// The resolved back navigation target represented as a
+        /// <see cref="TrailbackHistoryEntry"/>.
+        /// </returns>
+        internal TrailbackHistoryEntry GetBackTargetHistoryEntry()
+        {
+            return CreateHistoryEntry(ResolveBackTarget());
+        }
+        
+        #endregion
+        
 
         #region History Maintenance
 
@@ -313,7 +389,7 @@ namespace ModularForge.Trailback.Core
         {
             if (item == null)
             {
-                Debug.LogError("[Trailback] Cannot push null item.");
+                Debug.LogError("[Trailback] Navigation entry cannot be null.");
 
                 return false;
             }
@@ -381,7 +457,6 @@ namespace ModularForge.Trailback.Core
 
             return removed;
         }
-
         
         /// <summary>
         /// Returns the history stack associated with the specified category, creating it if necessary.
@@ -402,7 +477,6 @@ namespace ModularForge.Trailback.Core
 
             return stack;
         }
-        
         
         /// <summary>
         /// Returns the active navigation entry from the specified category.
@@ -436,14 +510,19 @@ namespace ModularForge.Trailback.Core
         }
 
         /// <summary>
-        /// Returns the previous navigation entry from the specified category.
+        /// Returns the previous navigation entry within the specified category.
         /// </summary>
         /// <param name="category">
-        /// Category whose previous entry should be retrieved.
+        /// Category whose previous navigation entry should be retrieved.
         /// </param>
         /// <returns>
-        /// Previous navigation entry, or null if one cannot be resolved.
+        /// The previous navigation entry within the specified category, or null if
+        /// fewer than two entries exist.
         /// </returns>
+        /// <remarks>
+        /// This method operates only on the specified category's history stack.
+        /// It does not resolve Trailback's overall back navigation target.
+        /// </remarks>
         private IBackNavigable PeekPrevious(NavigationCategorySo category)
         {
             if (!_historyByCategory.TryGetValue(category, out var stack))
@@ -459,6 +538,85 @@ namespace ModularForge.Trailback.Core
             var items = stack.ToArray();
 
             return items[1];
+        }
+        
+        /// <summary>
+        /// Creates an ordered collection of diagnostic history entries.
+        /// </summary>
+        /// <returns>
+        /// A collection of history entries ordered by category priority and
+        /// navigation order.
+        /// </returns>
+        private List<TrailbackHistoryEntry> CreateHistoryEntries()
+        {
+            var entries = new List<TrailbackHistoryEntry>();
+
+            var categories = new List<NavigationCategorySo>(_historyByCategory.Keys);
+
+            categories.Sort((left, right) => right.Priority.CompareTo(left.Priority));
+
+            foreach (var category in categories)
+            {
+                var stack = _historyByCategory[category];
+
+                foreach (var navigable in stack)
+                {
+                    entries.Add(CreateHistoryEntry(navigable));
+                }
+            }
+
+            return entries;
+        }
+        
+        /// <summary>
+        /// Creates a diagnostic history entry for the specified navigation entry.
+        /// </summary>
+        /// <param name="navigable">
+        /// Navigation entry to convert.
+        /// </param>
+        /// <returns>
+        /// A diagnostic representation of the navigation entry.
+        /// Returns the default value if the navigation entry is null.
+        /// </returns>
+        private static TrailbackHistoryEntry CreateHistoryEntry(IBackNavigable navigable)
+        {
+            return navigable == null ? default : new TrailbackHistoryEntry(navigable);
+        }
+
+        /// <summary>
+        /// Returns the highest priority navigation category, excluding the specified
+        /// category.
+        /// </summary>
+        /// <param name="excludedCategory">
+        /// Category to exclude from the search.
+        /// </param>
+        /// <returns>
+        /// The highest priority remaining category that contains navigation history,
+        /// or null if no matching category exists.
+        /// </returns>
+        private NavigationCategorySo GetHighestPriorityCategoryExcluding(NavigationCategorySo excludedCategory)
+        {
+            NavigationCategorySo winner = null;
+
+            foreach (var pair in _historyByCategory)
+            {
+                if (pair.Key == excludedCategory)
+                {
+                    continue;
+                }
+
+                if (pair.Value.Count == 0)
+                {
+                    continue;
+                }
+
+                if (winner == null || pair.Key.Priority > winner.Priority)
+                {
+                    winner = pair.Key;
+                }
+            }
+
+            return winner;
         }
 
         #endregion

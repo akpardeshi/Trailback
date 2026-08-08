@@ -1,4 +1,21 @@
-﻿# Trailback 1.0.0-alpha Release Notes
+﻿# Trailback 1.1.0-alpha Release Notes
+
+** Release Date** 6 August 2026
+
+## Added
+
+### Trailback Runtime Debugger
+
+`Trailback Runtime Debugger` allows the develoepr to debug `Trailback` navigation history. 
+
+### Improved
+
+* Simplified the README.md Quick Start Guide.
+* Added `TrailbackDeveloperGuide.md` with detailed feature integration details.
+
+---
+
+# Trailback 1.0.0-alpha Release Notes
 
 ## Overview
 

@@ -5,7 +5,7 @@ namespace ModularForge.Trailback.Editor
     /// <summary>
     /// Stores the results produced by a validation pass, including all validation messages and severity counts.
     /// </summary>
-    public sealed class ValidationResult
+    public class ValidationResult
     {
         #region Readonly Lists
         
